@@ -8,6 +8,11 @@ const sidebarWidth = 100;
 function App() {
   return (
     <div className='app'>
+      <div id='popup'>
+        <button id='button'>
+          close
+        </button>
+      </div>
       {/* <div className="sidebar">
         <img src={logo} className="logo"/>
         <hr/>

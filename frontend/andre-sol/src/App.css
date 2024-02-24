@@ -52,3 +52,16 @@
 .sidebarDivider {
   width: 70%;
 }
+
+#popup {
+  width: 40vw;
+  height: 20vh;
+  display: none;
+  position: absolute;
+  left: 30vw;
+  right: auto;
+  top: 0px;
+  border: solid;
+  background-color: lightslategray;
+  z-index: 5;
+}

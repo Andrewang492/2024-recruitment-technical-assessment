@@ -5,7 +5,6 @@ function Card({info}) {
     let {course_prefix, course_code, course_title, average_stars, total_reviews, offered_terms} = info;
     // console.log(info)
     const [value, setValue] = React.useState(parseFloat(average_stars));
-    console.log(value);
     const ratingObj = (
         <Box>
             <Rating sx={{color: 'rgb(198, 173, 250)', fontSize: '2.5rem'}} name="read-only" value={value} precision={0.2}  readOnly />

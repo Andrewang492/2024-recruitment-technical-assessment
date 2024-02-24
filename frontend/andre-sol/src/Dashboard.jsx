@@ -7,11 +7,20 @@ import Card from './Card';
 
 
 function Dashboard({sidebarWidth}) {
+    const [colour, setColour] = React.useState('dodgerblue');
+    const handleTitleClick = (target) => {
+        if (colour === 'dodgerblue') {
+            setColour('teal')
+        } else {
+            setColour('dodgerblue')
+        }
+    }
+
 
   return (
     <Box className='main' sx={{width: `calc(90% - ${sidebarWidth}px)`, paddingLeft: '100px', paddingTop: '20px'}}>
         <Typography variant='h6'>DevSoc presents...</Typography>
-        <Typography variant='h1' fontWeight={'700'} color={'dodgerblue'}>unilectives</Typography>
+        <Typography variant='h1' fontWeight={'700'} color={colour} onClick={handleTitleClick}>unilectives</Typography>
         <Typography variant='h6' fontWeight={'700'}>Your one-stop shop for UNSW course and elective reviews</Typography>
         <SearchBar/>
         <SortSelector/>

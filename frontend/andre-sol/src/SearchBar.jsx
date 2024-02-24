@@ -1,6 +1,6 @@
 // Acknowledgement to https://mui.com/material-ui/react-app-bar/ : App Bar with Search Field.
 
-import React from 'react'
+import React, { useEffect } from 'react'
 import { styled, alpha, ThemeProvider } from '@mui/material/styles';
 import Typography from '@mui/material/Typography';
 import SearchIcon from '@mui/icons-material/Search';
@@ -41,10 +41,38 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
     border: 'solid',
     borderRadius: '5px'
 }));
-      
+
+
 function SearchBar() {
+    const [display, setDisplay] = React.useState('none');
+    
+    useEffect(() => {
+        let box = document.getElementById('popup');
+        let button = document.getElementById("button");
+        button.addEventListener('click', (e) => {
+            box.style.display = 'none'
+        })
+    }, [display])
+    
+    let showBox = () => {
+        let box = document.getElementById('popup');
+        box.style.display = 'block';
+    }
+
+    
+    const hideBox = () => {
+        setDisplay('none');
+        console.log('lciked to hide')
+    }
+
+    // const box = (
+    //     <div className='popup' display={'none'}>
+    //         <button onClick={hideBox}>Close</button>
+    //     </div>
+    // )
+
     return (
-        <div className='search'>
+        <div className='search' onClick={showBox}>
             <Search>
             <SearchIconWrapper>
                 <SearchIcon />
