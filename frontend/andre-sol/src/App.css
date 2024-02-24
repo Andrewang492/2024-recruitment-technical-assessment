@@ -1,0 +1,54 @@
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.app {
+  display: flex;
+  flex-direction: row;
+  height: 95vh;
+  width: 100vw;
+  
+}
+
+.sidebar {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgb(250, 250, 250);
+}
+
+.logo {
+  width: 34px;
+  height: 34px;
+  margin: 15px;
+}
+
+.search {
+  margin-top: 40px;
+}
+
+.elective-card {
+  width: 500px;
+}
+
+.term {
+  height: 30px;
+  background-color: rgb(189, 242, 255);
+  padding: 0px 10px 0px 10px;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.sidebarDivider {
+  width: 70%;
+}
